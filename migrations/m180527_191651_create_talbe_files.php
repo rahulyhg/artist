@@ -18,6 +18,16 @@ class m180527_191651_create_talbe_files extends Migration
             'path' => $this->string(),
         ]);
 
+        $this->insert('files', [
+            'name' => 'press-reliz',
+        ]);
+        $this->insert('files', [
+            'name' => 'teh-rider',
+        ]);
+        $this->insert('files', [
+            'name' => 'bit-rider',
+        ]);
+
     }
 
     /**

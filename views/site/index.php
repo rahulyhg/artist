@@ -236,7 +236,7 @@ $this->title = 'My Yii Application';
                             <?php echo $content[9]->title; ?><br>
                             <span><?php echo $content[9]->content; ?></span></p>
 
-                        <p class="mass-media__contacts-desc"><?php echo $content[10]->title; ?></p>
+                        <p class="mass-media__contacts-desc"><?php echo $content[10]->content; ?></p>
 
                     </div>
 

@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Загрузить картинку', ['set-file', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Загрузить файл', ['set-file', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
     </p>
 
     <?= DetailView::widget([

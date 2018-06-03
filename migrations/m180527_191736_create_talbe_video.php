@@ -17,6 +17,10 @@ class m180527_191736_create_talbe_video extends Migration
             'name' => $this->string(),
             'url' => $this->string(),
         ]);
+        $this->insert('video', [
+            'name' => 'Youtube',
+            'url' => '',
+        ]);
     }
 
     /**
