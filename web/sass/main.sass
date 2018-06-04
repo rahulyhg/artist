@@ -1,0 +1,1086 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  font-size: 12px
+  min-width: 320px
+  position: relative
+  line-height: 1.3
+  font-family: $default-font
+  font-weight: bold
+  text-transform: uppercase
+  overflow-x: hidden
+  color: #ffffff
+  opacity: 1
+
+section
+  padding: 95px 0
+
+.container-fluid
+  padding-left: 140px
+  padding-right: 140px
+
+.img-responsive
+  display: block
+  width: 100%
+  height: auto
+
+.fa
+  font-weight: normal
+
+a
+  color: #ffffff
+
+  &:hover
+    text-decoration: none
+    color: #ffffff
+
+  &:active
+    text-decoration: none
+    color: #ffffff
+
+  &:focus
+    text-decoration: none
+    color: #ffffff
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #191919
+  z-index: 100
+
+  .loading
+    color: #ffffff
+    font-family: "DinProCondBlack", sans-serif
+    text-transform: uppercase
+    font-size: 50px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    &::after
+      content: '.'
+      animation: loading 0.9s ease alternate infinite
+
+
+@-webkit-keyframes loading
+  60%
+    text-shadow: 0.35em 0 0
+  100%
+    text-shadow: 0.35em 0 0, 0.75em 0 0
+
+
+@keyframes loading
+  60%
+    text-shadow: 0.35em 0 0
+  100%
+    text-shadow: 0.35em 0 0 , 0.75em 0 0
+
+
+/******************* HEADER *******************/
+
+
+.header
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100vh
+  position: relative
+  padding: 45px
+  background-image: url(../img/head-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: left center
+  z-index: 5
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(19, 19, 19,0.5)
+    z-index: -2
+
+  &__logotype
+    max-width: 40px
+    display: inline-block
+    margin: 0 50px
+
+    &-text-left
+      font-size: 12px
+      margin-left: 20px
+      letter-spacing: 1.5px
+      display: inline-block
+
+    &-text-right
+      font-size: 12px
+      letter-spacing: 1.5px
+      display: inline-block
+
+  &__logo-slogan
+    text-align: center
+    letter-spacing: 1.5px
+    font-size: 12px
+    margin: 30px auto 0
+    max-width: 200px
+
+  &__top-center
+    text-align: center
+
+    .row
+      margin: 0
+    div[class^='col-']
+      padding: 0
+
+  &__top
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  &__i-musiclist
+    font-size: 15px
+    padding: 12px
+    width: 40.5px
+    font-weight: normal
+    border-radius: 50%
+    border: 1px solid #fff
+
+  &__top-text-left
+    transform: rotate(-90deg)
+    white-space: nowrap
+    position: absolute
+    left: -8px
+    top: 300px
+    margin: 0
+    letter-spacing: 1.5px
+    transition: all .25s ease
+
+  &__i-video
+    font-size: 15px
+    padding: 12px 12px 12px 15px
+    width: 40px
+    font-weight: normal
+    border-radius: 50%
+    border: 1px solid #fff
+
+  &__top-text-right
+    transform: rotate(90deg)
+    white-space: nowrap
+    position: absolute
+    right: 5px
+    top: 288px
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__center
+    display: flex
+    position: relative
+    z-index: -1
+    
+    &::before
+      content: ''
+      position: absolute
+      left: -45px
+      top: -60px
+      width: 23%
+      height: 120%
+      background-image: url(../img/pattern.png)
+
+    &::after
+      content: ''
+      position: absolute
+      right: -45px
+      top: -60px
+      width: 23%
+      height: 120%
+      background-image: url(../img/pattern.png)
+
+  &__center-wrap
+    margin: auto
+    text-align: center
+
+    .audioplayer
+      margin-bottom: 50px
+
+    .audioplayer-playpause
+      text-indent: -9999px
+
+      a
+        display: block
+        position: relative
+        width: 71.2px
+        margin: 0 auto
+        padding: 25px
+        border: 1px solid #fff
+        border-radius: 50%
+        padding: 27px 34.5px
+        transition: all .45s ease
+
+    .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a::before
+      width: 0
+      height: 0
+      border: 15px solid transparent
+      border-left: 25px solid #fff
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-23%, -50%)
+
+    .audioplayer-playing .audioplayer-playpause a
+
+      &:before, &:after
+        width: 9px
+        height: 25px
+        background-color: #fff
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+      &:before
+        left: 22px
+
+      &:after
+        right: 22px
+
+    .audioplayer-time
+      display: none
+      position: absolute
+
+    .audioplayer-bar
+      display: none
+      position: absolute
+
+    .audioplayer-volume
+      display: none
+      position: absolute
+
+  &__center-small-title
+    text-transform: none
+    font-weight: normal
+    font-size: 14px
+    margin-top: 0
+    margin-bottom: 0
+
+  &__center-medium-title
+    font-family: "DinProCondBlack", sans-serif
+    font-weight: normal
+    font-size: 24px
+    margin-top: 0
+    margin-bottom: 5px
+
+  &__center-large-title
+    font-family: "DinProCondBlack", sans-serif
+    font-weight: normal
+    font-size: 45px
+    max-width: 400px
+    line-height: 1
+    margin: 0 auto 25px
+
+  &__center-text-desc
+    text-transform: none
+    font-weight: normal
+    font-size: 14px
+    max-width: 205px
+    line-height: 1.6
+    margin: 0 auto 50px
+
+  &__center-i-sound
+    font-size: 25px   
+    padding: 21.2px 12px 22px 19px
+    width: 70px
+    font-weight: normal
+    border-radius: 50%
+    border: 1px solid #fff
+    margin-bottom: 60px
+
+  &__button-yand
+    height: 40px
+    width: auto
+    margin: 0 5px
+    display: inline-block
+
+  &__button-google
+    height: 40px
+    width: auto
+    margin: 0 5px
+    display: inline-block
+
+  &__button-itunes
+    height: 40px
+    width: auto
+    margin: 0 5px
+    display: inline-block
+
+
+  &__bottom
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  &__download-link
+    padding: 0
+    margin: 0 0 0 15px
+    list-style-type: none
+
+    li
+      display: inline-block
+      margin: 0 15px
+      letter-spacing: 1.5px
+
+      &:first-child
+        margin-left: 0
+
+      .fa
+        margin-right: 8px
+
+  &__social
+    padding: 0
+    margin: 0
+    list-style-type: none
+
+    li
+      display: inline-block
+      margin: 0 13px
+
+      &:last-child
+        margin-right: 8.5px
+
+      .fa
+        width: 20px
+        height: 20px
+        text-align: center
+
+      .fa-instagram
+        font-size: 17px
+        position: relative
+        bottom: -2px
+
+      .fa-facebook-square
+        font-size: 16px
+        position: relative
+        bottom: -1px
+
+      .fa-youtube-play
+        font-size: 19px
+        position: relative
+        bottom: -2px
+
+      .fa-vk
+        font-size: 19px
+
+  &__bottom-text
+    margin: 0
+    position: absolute
+    right: 380px
+    bottom: 52px
+    letter-spacing: 1.5px
+
+  &__bottom-right-text
+    transform: rotate(90deg)
+    white-space: nowrap
+    position: absolute
+    right: 0
+    bottom: 175px
+    margin: 0
+    cursor: pointer
+    letter-spacing: 1.5px
+
+    .fa
+      position: relative
+      left: 15px
+      font-size: 11px
+
+.text__right-line
+
+  &::before
+    content: ''
+    position: absolute
+    right: -110px
+    top: 50%
+    transform: translateY(-50%)
+    width: 65px
+    height: 1px
+    background-color: #ffffff
+
+.text__left-line
+
+  &::after
+    content: ''
+    position: absolute
+    left: -110px
+    top: 50%
+    transform: translateY(-50%)
+    width: 65px
+    height: 1px
+    background-color: #ffffff
+
+.audioplayer
+
+  .audioplayer-playpause
+    margin: 0 5px
+
+  .audioplayer-time
+    margin: 0 5px
+
+  .audioplayer-bar
+    margin: 0 5px
+
+  .audioplayer-volume
+    margin: 0 5px
+    
+
+
+
+
+/******************* SECTION EVENT *******************/
+
+
+.event
+  background-color: #191919
+  padding-bottom: 170px
+  position: relative
+
+  &__main
+    width: 100%
+    min-height: 550px
+    background-image: url(../img/event.jpg)
+    background-repeat: no-repeat
+    background-position: center 30%
+    background-size: cover
+    padding: 60px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    z-index: 1
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(15, 15, 15,0.4)
+      z-index: -2
+
+  &__main-top
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  &__title
+    margin-top: 0
+    font-size: 38px
+    font-family: "DinProCondBlack", sans-serif
+    text-transform: uppercase
+    margin-bottom: 25px
+    line-height: 1.2
+
+  &__date
+    margin-top: 0
+    font-size: 37px
+    line-height: 0.75
+
+    span
+      font-size: 13.5px
+      display: inline-block
+      line-height: 1.25
+
+  &__time
+    margin-bottom: 0
+    font-size: 37px
+    line-height: 0.9
+
+  &__main-top-left
+    font-size: 14px
+    text-transform: none
+    font-family: "DinProLight", sans-serif
+    font-weight: normal
+    position: relative
+    line-height: 1.6
+
+    &::before
+      content: ''
+      position: absolute
+      left: 24px
+      top: -13px
+      width: 180px
+      height: 470px
+      background-image: url(../img/pattern.png)
+      z-index: -1
+
+    p 
+      max-width: 425px
+
+  &__main-top-right
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      right: 10px
+      top: -20px
+      width: 125px
+      height: 200px
+      background-image: url(../img/pattern.png)
+      z-index: -1
+
+  &__title-decor
+    position: absolute
+    bottom: -70px
+    right: 110px
+    color: #141414
+    font-size: 290px
+    font-family: "DinProCondBlack", sans-serif
+    z-index: 5
+    margin: 0
+    line-height: 0.7
+    text-transform: none
+
+  &__left-title
+    position: absolute
+    top: 50%
+    left: 45px
+    transform: rotate(-90deg) translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__right-title
+    position: absolute
+    top: 50%
+    right: -41px
+    transform: rotate(90deg) translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+
+/******************* SECTION GALLERY *******************/
+
+
+.gallery
+  background-color: #141414
+  position: relative
+
+  &__left-title
+    position: absolute
+    top: 50%
+    left: 45px
+    transform: rotate(-90deg) translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__right-title
+    position: absolute
+    top: 50%
+    right: -1px
+    transform: rotate(90deg) translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__carousel
+    position: relative
+    padding-top: 45px
+    z-index: 10
+
+    .owl-item
+      transform: scale(0.8)
+      transition: all .5s ease
+
+    .center
+      transform: scale(1)
+
+    .owl-nav
+      position: absolute
+      top: 0
+      width: 100%
+
+      .owl-prev
+        position: absolute
+        left: 6%
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 16px
+        padding-left: 30px
+        outline: none
+
+        &::after
+          content: '\f104'
+          font-family: FontAwesome
+          position: absolute
+          left: 0
+          top: -3px
+          font-size: 16px
+
+        &:before
+          content: ''
+          position: absolute
+          top: -20px
+          left: 40px
+          width: 76px
+          height: 130px
+          background-image: url(../img/pattern.png)
+          z-index: -1
+
+      .owl-next
+        position: absolute
+        right: 6%
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 16px
+        padding-right: 30px
+        outline: none
+
+        &::after
+          content: '\f105'
+          font-family: FontAwesome
+          position: absolute
+          right: 0
+          top: -3px
+          font-size: 16px
+
+        &:before
+          content: ''
+          position: absolute
+          top: -20px
+          right: 40px
+          width: 76px
+          height: 130px
+          background-image: url(../img/pattern.png)
+          z-index: -1
+
+    .owl-dots
+      text-align: center
+      margin-top: 80px
+
+      .owl-dot
+        display: inline-block
+        padding: 0
+        width: 13px
+        height: 13px
+        border: 1px solid #fff
+        border-radius: 50%
+        margin: 0 7px
+        transition: all .25s ease
+        outline: none
+
+      .active
+        background-color: #ffffff
+
+  &__carousel-wrap
+    position: relative
+
+  &__title-decor
+    position: absolute
+    bottom: 0
+    left: 10%
+    color: #191919
+    font-size: 230px
+    font-family: "DinProCondBlack", sans-serif
+    margin: 0
+    line-height: 0.7
+    z-index: 1
+    
+
+/******************* SECTION MASS-MEDIA *******************/
+
+
+.mass-media
+  background-color: #191919
+  position: relative
+  z-index: -5
+
+  &__left-title
+    position: absolute
+    top: 50%
+    left: 26px
+    transform: rotate(-90deg) translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__right-title
+    position: absolute
+    top: 50%
+    right: 60px
+    transform: translateY(-50%)
+    white-space: nowrap
+    margin: 0
+    letter-spacing: 1.5px
+
+  &__social
+    list-style-type: none
+    margin: 0
+    padding: 0
+    text-align: center
+
+    li
+      margin: 22px 0
+
+      a
+        font-size: 15px
+        width: 18px
+        height: 16px
+
+  &__news
+    max-width: 200px
+    margin: 0 auto 50px
+
+  &__news-date
+    margin-top: 0
+    font-size: 25.5px
+    line-height: 0.75
+    text-align: right
+    margin-bottom: 15px
+
+    span
+      font-size: 10px
+      display: inline-block
+      line-height: 1.25
+
+  &__news-logo
+    width: 100%
+    height: 185px
+    background-image: url(../img/news.png)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    margin-bottom: 20px
+
+  &__news-title
+    margin-bottom: 0
+
+  &__news-autor
+    font-size: 10px
+    text-transform: none
+    font-family: 'DinProLight', sans-serif
+    font-weight: normal
+    margin-top: 0
+    margin-bottom: 0
+    font-style: italic
+
+  &__news-desc
+    font-size: 10px
+    text-transform: none
+    font-family: 'DinProLight', sans-serif
+    font-weight: normal
+    margin-top: 10px
+
+  &__news-button
+    font-size: 10px
+    padding-right: 20px
+    position: relative
+
+    .fa
+      font-size: 10px
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: all .1s ease-in-out
+
+    &:hover .fa
+      right: -5px
+
+  &__contacts-logo
+    width: 100%
+    max-width: 500px
+    height: 765px
+    margin-left: auto
+    background-image: url(../img/contacts-logo.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      left: -240px
+      top: 80px
+      width: 350px
+      height: 620px
+      background-image: url(../img/pattern.png)
+      z-index: -1
+
+  &__contacts
+    position: absolute
+    left: -190px
+    bottom: 0
+    z-index: 5
+
+  &__contacts-title
+    font-size: 25px
+
+  &__contacts-desc
+    font-weight: normal
+    text-transform: none
+    margin-bottom: 0
+
+    span
+      font-weight: bold
+
+  &__title-decor
+    position: absolute
+    top: 20px
+    left: -180px
+    color: #141414
+    font-size: 200px
+    font-family: "DinProCondBlack", sans-serif
+    z-index: 5
+    margin: 0
+    line-height: 0.8
+    text-transform: uppercase
+
+
+/******************* FOOTER *******************/
+
+
+.footer
+  padding: 70px 0
+  background-color: #141414
+  text-align: center
+
+  &__logotype
+    max-width: 40px
+    display: inline-block
+    margin: 0 50px
+
+    &-text-left
+      font-size: 12px
+      margin-left: 20px
+      letter-spacing: 1.5px
+
+    &-text-right
+      font-size: 12px
+      letter-spacing: 1.5px
+
+.musiclist
+  opacity: 0
+
+  &__item
+    display: block
+    margin-bottom: 5px
+
+  &__title
+    margin: 20px 0 10px
+    text-align: left
+    font-size: 10px
+
+  &__popup
+    background-color: #141414
+    padding: 10px 20px 20px
+    display: none
+    position: absolute
+    top: 100px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 60
+
+    .audioplayer
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      margin-bottom: 10px
+      background-color: #191919
+      padding: 5px 20px 5px 10px
+
+      .audioplayer-bar
+        width: 100px
+        height: 3px
+        background: #333
+        position: relative
+
+        .audioplayer-bar-loaded
+          background-color: #222
+          position: absolute
+          left: 0
+          top: 0
+          height: 3px
+
+        .audioplayer-bar-played
+          background-color: #fff
+          position: absolute
+          left: 0
+          top: 0
+          height: 3px
+
+    .audioplayer-playpause
+      margin: 0 10px 0 0
+      width: 50px
+      height: 50px
+      text-align: center
+      border-radius: 50%
+      position: relative
+
+      a
+        display: block
+        width: 50px
+        height: 50px
+
+      .fa
+        position: absolute
+        top: 50%
+        left: 55%
+        transform: translate(-50%, -50%)
+        font-size: 18px
+        color: #fff
+      .fa-pause
+        left: 50%
+
+    .audioplayer-volume
+      margin: 0 0 0 10px
+
+    .audioplayer-volume-button
+      margin-top: 1px
+      padding: 0 5px
+
+      .fa
+        font-size: 15px
+        width: 20px
+        text-align: center
+
+.video
+
+  &__popup
+    background-color: #191919
+    padding: 0
+    display: none
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 60
+    width: 100%
+    max-width: 800px
+
+  &__iframe-wrap
+    position: relative
+    padding-bottom: 56.25%
+    height: 0
+    overflow: hidden
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+.overlay
+  z-index: 50
+  position: fixed
+  background-color: #141414
+  opacity: .9
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+.close
+  position: absolute
+  right: 0
+  top: -35px
+  width: 32px
+  height: 32px
+  opacity: 0.8
+  cursor: pointer
+
+  &:hover
+    opacity: 1
+
+  &:before
+    transform: rotate(45deg)
+    position: absolute
+    left: 15px
+    content: ' '
+    height: 30px
+    width: 3px
+    background-color: #fff
+
+  &:after
+    transform: rotate(-45deg)
+    position: absolute
+    left: 15px
+    content: ' '
+    height: 30px
+    width: 3px
+    background-color: #fff
+
+.animated
+  animation-duration: 1.2s
+  animation-fill-mode: both
+
+.animated.infinite
+  animation-iteration-count: infinite
+
+@keyframes fadeInDown
+  0%
+    opacity: 1
+    transform: translate3d(-100%, 0, 0)
+
+  50%
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+  100%
+    opacity: 1
+    transform: translate3d(-100%, 0, 0)
+
+.fadeInDown
+  animation-name: fadeInDown
+
+
+@import "media"
+// Всегда в конце

@@ -1,0 +1,402 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media only screen and (max-width : 1700px)
+  .mass-media
+
+    &__contacts
+      left: 0
+      bottom: -215px
+
+    &__contacts-logo
+      height: 650px
+      max-width: 390px
+
+      &::after
+        height: 465px
+        top: 349px
+        left: -53px
+
+    &__title-decor
+      font-size: 180px
+      left: -85px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .container-fluid
+    padding-left: 40px
+    padding-right: 40px
+
+  section
+    padding: 85px 0
+
+  .header
+    height: auto
+
+    &__center
+      margin-top: 90px
+
+    &__logotype
+      margin: 0 35px
+
+    &__bottom
+      flex-wrap: wrap
+      text-align: center
+      margin-top: 20px
+
+    &__bottom-left
+      flex: 1 0 60%
+      margin-bottom: 25px
+
+    &__bottom-right
+      flex: 1 0 100%
+
+    &__bottom-right-text
+      display: none
+
+    &__bottom-text
+      display: none
+
+    &__title-decor
+      font-size: 30px
+
+  .event
+    padding-bottom: 90px
+
+    &__title-decor
+      font-size: 155px
+      bottom: -30px
+      right: 45px
+
+    &__left-title
+      position: relative
+      top: -42px
+      left: 50%
+      transform: none
+      transform: translateX(-50%)
+      display: inline-block
+
+    &__right-title
+      display: none
+
+  .gallery
+
+    &__title-decor
+      font-size: 130px
+
+    &__left-title
+      position: relative
+      top: -42px
+      left: 50%
+      transform: none
+      transform: translateX(-50%)
+      display: inline-block
+
+    &__carousel-wrap
+      margin-top: 20px
+
+    &__right-title
+      display: none
+
+    .container-fluid
+      padding-left: 0
+      padding-right: 0
+
+  .mass-media
+    padding-bottom: 305px
+
+    &__contacts-logo
+      height: 650px
+      margin-right: auto
+      margin-top: 40px
+      max-width: 390px
+
+      &::after
+        height: 530px
+
+    &__left-title
+      position: relative
+      top: -42px
+      left: 50%
+      transform: none
+      transform: translateX(-50%)
+      display: inline-block
+
+    &__right-title
+      display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .mass-media
+
+    &__contacts-logo
+      height: 650px
+      margin-right: auto
+      max-width: 390px
+
+  .preloader
+    display: none
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .container-fluid
+    padding-left: 15px
+    padding-right: 15px
+
+  .header
+    height: auto
+    padding: 30px 0
+
+    &__center
+
+      &::before
+        left: 0
+        top: 0
+        width: 10%
+        height: 80%
+
+      &::after
+        right: 0
+        top: 0
+        width: 10%
+        height: 80%
+
+    &__logotype
+      margin: 0 15px
+
+    &__top
+      flex-wrap: wrap
+
+    &__top-left
+      order: 2
+      flex: 1 0 50%
+      text-align: center
+      margin-top: 25px
+
+      .fa
+        margin-bottom: 15px
+
+    &__top-center
+      order: 1
+      flex: 1 0 100%
+      text-align: center
+
+    &__top-right
+      order: 3
+      flex: 1 0 50%
+      text-align: center
+      margin-top: 25px
+
+      .fa
+        margin-bottom: 15px
+
+    &__top-text-left
+      transform: none
+      position: relative
+      top: 0
+      left: 0
+
+      &::before
+        display: none
+
+    &__top-text-right
+      transform: none
+      position: relative
+      top: 0
+      left: 0
+
+      &::after
+        display: none
+
+    &__logotype-text-left
+      font-size: 8px
+      margin: 0
+      display: none
+
+    &__logotype-text-right
+      font-size: 8px
+      display: none
+
+    &__logo-slogan
+      display: none
+
+    &__center-large-title
+      font-size: 40px
+
+    &__center-medium-title
+      font-size: 20px
+
+    &__center
+      margin-top: 65px
+
+    &__center-button-wrap
+      text-align: center
+      display: inline-block
+      margin: 0 auto
+
+    &__center-i-sound
+      margin: 0 auto 50px
+      display: block
+
+    &__button-yand
+      display: block
+      margin: 15px auto 0
+
+    &__button-google
+      display: inline-block
+      margin: 15px 10px 0
+
+    &__button-itunes
+      display: inline-block
+      margin: 15px 10px 0
+
+    &__download-link
+      text-align: left
+      display: inline-block
+      margin: 0 auto
+      padding-left: 47px
+
+      li
+        margin: 7px 0 0
+        display: block
+        font-size: 14px
+
+  .event
+
+    &__title
+      margin-bottom: 15px
+
+    &__main
+      padding: 20px
+
+    &__main-top
+      flex-wrap: wrap
+
+    &__main-top-left
+      flex: 1 0 100%
+      order: 1
+      font-size: 12px
+
+      &::before
+        left: 24px
+        top: 255px
+        width: 110px
+        height: 210px
+
+    &__main-top-right
+      flex: 1 0 100%
+
+      &::before
+        display: none
+
+    &__date
+      margin-bottom: 0
+
+  .gallery
+
+    .container-fluid
+      padding-left: 15px
+      padding-right: 15px
+
+  .mass-media
+
+    &__contacts-logo
+      height: 540px
+      max-width: 315px
+
+      &::after
+        height: 435px
+
+    &__title-decor
+      font-size: 122px
+      left: -100px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .gallery
+
+    &__carousel
+
+      .owl-dots
+        margin: 0
+
+    &__title-decor
+      font-size: 85px
+      bottom: -25px
+      z-index: 15
+
+  .event
+
+    &__title-decor
+      font-size: 80px
+      bottom: -20px
+      right: 15px
+
+  .mass-media
+
+    &__title-decor
+      font-size: 99px
+      left: -41px
+
+    &__contacts-logo
+      height: 375px
+      max-width: 233px
+      margin-right: auto
+
+      &::after
+        width: 250px
+        height: 386px
+        top: 179px
+        left: -41px
+
+
+  .text__right-line
+
+    &::before
+      right: -85px
+
+  .text__left-line
+
+    &::after
+      left: -85px
+
+  .musiclist__popup
+    .audioplayer
+      .audioplayer-bar
+        width: 50px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/
+

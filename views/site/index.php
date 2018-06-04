@@ -95,7 +95,7 @@ $this->title = 'My Yii Application';
 
             </ul>
 
-            <p class="header__bottom-right-text">Скрольте вниз <i class="fa fa-chevron-right"></i></p>
+            <p class="header__bottom-right-text">Скрольте вниз <i class="fa fa-chevron-right fadeInDown animated infinite"></i></p>
 
         </div>
 
@@ -103,7 +103,7 @@ $this->title = 'My Yii Application';
 
 </div>
 
-<section class="event">
+<section id="scrollto" class="event">
 
     <p class="event__left-title text__right-line text__left-line">Афиша</p>
     <p class="event__right-title">Декоративная полезная инфа</p>
@@ -267,8 +267,9 @@ $this->title = 'My Yii Application';
     <div class="musiclist__popup">
 
         <div class="close"></div>
+        <p class="musiclist__title">Зима, зачем?</p>
         <?php foreach ($music as $single): ?>
-        <audio class="musiclist__item" src="<?php echo $single->path; ?>" preload="auto" controls></audio>
+            <audio class="musiclist__item" src="<?php echo $single->path; ?>" preload="auto" controls></audio>
         <?php endforeach; ?>
     </div>
 

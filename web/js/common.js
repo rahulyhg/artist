@@ -1,6 +1,6 @@
 $(function() {
 
-	$('.gallery__carousel').owlCarousel({
+    $('.gallery__carousel').owlCarousel({
 
         center: true,
         items: 3,
@@ -24,13 +24,17 @@ $(function() {
                 items: 3
             },
         }
-	});
+    });
 
     $('.mass-media__news-text-wrap').equalHeights();
 
     $('.header__audio').audioPlayer();
 
-    $('.musiclist__item').audioPlayer();
+    $('.musiclist__item').audioPlayer({
+        strPlay: '<i class=\'fa fa-play\'></i>',
+        strPause: '<i class=\'fa fa-pause\'></i>',
+        strVolume: '<i class=\'fa fa-volume-up\'></i>'
+    });
 
     $('.header__musiclist').click( function(event){
         event.preventDefault();
@@ -38,7 +42,7 @@ $(function() {
             function(){
                 $('.musiclist__popup')
                     .css('display', 'block')
-                    .animate({opacity: 1, top: '50%'}, 200);
+                    .animate({opacity: 1, top: '100px'}, 200);
             });
     });
 
@@ -48,13 +52,13 @@ $(function() {
             function(){
                 $('.video__popup')
                     .css('display', 'block')
-                    .animate({opacity: 1, top: '50%'}, 200);
+                    .animate({opacity: 1, top: '100px'}, 200);
             });
     });
 
     $('.close, .overlay').click( function(){
         $('.musiclist__popup, .video__popup')
-            .animate({opacity: 0, top: '45%'}, 200,
+            .animate({opacity: 0, top: '50px'}, 200,
                 function(){
                     $(this).css('display', 'none');
                     $('.overlay').fadeOut(400);
@@ -62,8 +66,24 @@ $(function() {
             );
     });
 
-    $('.loading').delay(1500).fadeOut( "slow", function() {
+
+
+    $('.loading').delay(0).fadeOut( "slow", function() {
         $('.preloader').fadeOut("slow");
+    });
+
+
+    $('.header__bottom-right-text').on('click', function(e){
+      $('html,body').stop().animate({ scrollTop: $('#scrollto').offset().top }, 700);
+      e.preventDefault();
+    });
+
+    $('.audioplayer-volume-button i').on('click', function(){
+        if ($(this).hasClass('fa-volume-up')) {
+            $(this).removeClass('fa-volume-up').addClass('fa-volume-off');
+        }else {
+            $(this).removeClass('fa-volume-off').addClass('fa-volume-up');
+        }
     });
 
 });
