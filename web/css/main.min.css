@@ -3539,6 +3539,9 @@ a {
 
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width: 1700px) {
+  .mass-media{
+    padding-bottom: 305px;
+  }
   .mass-media__contacts {
     left: 0;
     bottom: -215px; }
