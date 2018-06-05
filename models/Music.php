@@ -42,4 +42,10 @@ class Music extends \yii\db\ActiveRecord
             'path' => 'Path',
         ];
     }
+
+    public function saveFile($filename)
+    {
+        $this->path = $filename;
+        return $this->save(false);
+    }
 }

@@ -68,9 +68,10 @@ class SiteController extends Controller
         $video = Video::findAll(['id' => 1]);
         $articles = Articles::find()->orderBy(['id' => SORT_DESC])->limit(6)->all();
         $images = Images::find()->select('path')->all();
-        $musics = Music::find()->select('path')->all();
+        $musics = Music::find()->all();
         $files = Files::find()->all();
-        $mainMusic = Music::find()->select('path')->orderBy(['id' => SORT_DESC])->limit(1)->all();
+        $mainMusic = Music::find()->select('path')->where(['name' => 'main'])->one();
+
         $content = Content::find()->all();
 
         foreach ($content as $key => $single){
@@ -78,8 +79,9 @@ class SiteController extends Controller
         }
 
         foreach ($mainMusic as $single){
-            $mainMusic = $single->path;
+            $mainMusic = $single;
         }
+
 
         foreach ($files as $key => $single)
         {

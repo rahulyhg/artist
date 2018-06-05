@@ -4,6 +4,9 @@
 
 $this->title = 'My Yii Application';
 ?>
+<div class="preloader">
+    <div class="loading">Загрузка</div>
+</div>
 <div class="header">
 
     <div class="header__top">
@@ -54,7 +57,7 @@ $this->title = 'My Yii Application';
 
             <p class="header__center-text-desc">Выпускник РИТИ ГИТИС (Мастерская народного артиста РФ, В.Б.Гаркалинфа)</p>
 
-            <audio class="header__audio" src="<?php echo $mainMusic; ?>" preload="auto" controls></audio>
+            <audio class="header__audio" src="/uploads/musics/<?php echo $mainMusic; ?>" preload="auto" controls></audio>
 
             <div class="header__center-button-wrap">
 
@@ -267,9 +270,9 @@ $this->title = 'My Yii Application';
     <div class="musiclist__popup">
 
         <div class="close"></div>
-        <p class="musiclist__title">Зима, зачем?</p>
         <?php foreach ($music as $single): ?>
-            <audio class="musiclist__item" src="<?php echo $single->path; ?>" preload="auto" controls></audio>
+            <p class="musiclist__title"><?php echo $single->name; ?></p>
+            <audio class="musiclist__item" src="/uploads/musics/<?php echo $single->path; ?>" preload="auto" controls></audio>
         <?php endforeach; ?>
     </div>
 

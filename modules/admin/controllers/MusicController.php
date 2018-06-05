@@ -2,12 +2,14 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\MusicUpload;
 use Yii;
 use app\models\Music;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * MusicController implements the CRUD actions for Music model.
@@ -123,5 +125,22 @@ class MusicController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionSetFile($id)
+    {
+        $model = new MusicUpload();
+        if (Yii::$app->request->isPost)
+        {
+            $article = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+
+            if($article->saveFile($model->uploadFile($file, $article->path)))
+            {
+                return $this->redirect(['view', 'id'=>$article->id]);
+            }
+        }
+
+        return $this->render('music', ['model'=>$model]);
     }
 }
