@@ -278,7 +278,7 @@ $this->title = 'My Yii Application';
                 <p class="mass-media__contacts-desc"><?php echo $content[8]->title; ?><br>
                     <span><?php echo $content[8]->content; ?></span></p>
 
-                <p class="mass-media__contacts-desc"><br>
+                <p class="mass-media__contacts-desc">Театр. кино (агент)<br>
                     <?php echo $content[9]->title; ?><br>
                     <span><?php echo $content[9]->content; ?></span></p>
 
