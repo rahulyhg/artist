@@ -259,15 +259,38 @@ $this->title = 'My Yii Application';
 
 <footer class="footer">
 
-    <a href="#">
+    <div class="container">
 
-        <span class="header__logotype-text-left">albina yarullina</span>
+        <div class="row">
 
-        <img src="img/logo.png" alt="" class="footer__logotype img-responsive">
+            <a href="#">
 
-        <span class="header__logotype-text-right">concert production</span>
+                <span class="header__logotype-text-left">albina yarullina</span>
 
-    </a>
+                <img src="img/logo.png" alt="" class="footer__logotype img-responsive">
+
+                <span class="header__logotype-text-right">concert production</span>
+
+            </a>
+
+            <div class="mass-media__contacts">
+
+                <p class="mass-media__contacts-desc"><?php echo $content[8]->title; ?><br>
+                    <span><?php echo $content[8]->content; ?></span></p>
+
+                <p class="mass-media__contacts-desc"><br>
+                    <?php echo $content[9]->title; ?><br>
+                    <span><?php echo $content[9]->content; ?></span></p>
+
+                <p class="mass-media__contacts-desc"><?php echo $content[10]->content; ?></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
 
     <div class="musiclist__popup">
 
