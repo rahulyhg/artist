@@ -3296,10 +3296,10 @@ a {
     bottom: 0;
     z-index: 5; }
   .mass-media__contacts-title {
-    margin-bottom: 20px
+    margin-bottom: 20px;
     font-size: 25px; }
   .mass-media__contacts-desc {
-    margin-top: 10px
+    margin-top: 10px;
     font-weight: normal;
     text-transform: none;
     margin-bottom: 0; }
