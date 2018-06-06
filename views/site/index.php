@@ -7,7 +7,7 @@ $this->title = 'My Yii Application';
 <div class="preloader">
     <div class="loading">Загрузка</div>
 </div>
-<div class="header">
+<div class="header" style="background-image: url(/uploads/<?php echo $headerImage; ?>)">
 
     <div class="header__top">
 
@@ -91,10 +91,10 @@ $this->title = 'My Yii Application';
 
             <ul class="header__social">
 
-                <li><a href="<?php echo $content[3]->title; ?>"><i class="fa fa-vk"></i></a></li>
-                <li><a href="<?php echo $content[4]->title; ?>"><i class="fa fa-youtube-play"></i></a></li>
-                <li><a href="<?php echo $content[5]->title; ?>"><i class="fa fa-facebook-square"></i></a></li>
-                <li><a href="<?php echo $content[6]->title; ?>"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="<?php echo $content[3]->title; ?>" target="_blank"><i class="fa fa-vk"></i></a></li>
+                <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="<?php echo $content[5]->title; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="<?php echo $content[6]->title; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
 
             </ul>
 
@@ -113,7 +113,7 @@ $this->title = 'My Yii Application';
 
     <div class="container-fluid">
 
-        <div class="event__main">
+        <div class="event__main" style="background-image: url(/uploads/<?php echo $eventImage; ?>)">
 
             <div class="event__main-top">
 
@@ -158,9 +158,11 @@ $this->title = 'My Yii Application';
 
             <div class="gallery__carousel">
                 <?php foreach ($images as $single): ?>
-                <div>
-                    <img src="/uploads/<?php echo $single->path;?>" alt="" class="img-responsive">
-                </div>
+                    <?php if($single->name !== 'header' && $single->name !== 'event' && $single->name !== 'footer'): ?>
+                        <div>
+                            <img src="/uploads/<?php echo $single->path;?>" alt="" class="img-responsive">
+                        </div>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
 
@@ -178,10 +180,10 @@ $this->title = 'My Yii Application';
     <div class="mass-media__right-title">
 
         <ul class="mass-media__social">
-            <li><a href="<?php echo $content[3]->title; ?>"><i class="fa fa-vk"></i></a></li>
-            <li><a href="<?php echo $content[4]->title; ?>"><i class="fa fa-youtube-play"></i></a></li>
-            <li><a href="<?php echo $content[5]->title; ?>"><i class="fa fa-facebook-square"></i></a></li>
-            <li><a href="<?php echo $content[6]->title; ?>"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="<?php echo $content[3]->title; ?>" target="_blank"><i class="fa fa-vk"></i></a></li>
+            <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href="<?php echo $content[5]->title; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="<?php echo $content[6]->title; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
         </ul>
 
     </div>
@@ -226,7 +228,7 @@ $this->title = 'My Yii Application';
 
             <div class="col-lg-6">
 
-                <div class="mass-media__contacts-logo">
+                <div class="mass-media__contacts-logo" style="background-image: url(/uploads/<?php echo $footerImage; ?>)">
 
                     <div class="mass-media__contacts">
 
@@ -271,8 +273,10 @@ $this->title = 'My Yii Application';
 
         <div class="close"></div>
         <?php foreach ($music as $single): ?>
-            <p class="musiclist__title"><?php echo $single->name; ?></p>
-            <audio class="musiclist__item" src="/uploads/musics/<?php echo $single->path; ?>" preload="auto" controls></audio>
+            <?php if($single->name !== 'main'): ?>
+                <p class="musiclist__title"><?php echo $single->name; ?></p>
+                <audio class="musiclist__item" src="/uploads/musics/<?php echo $single->path; ?>" preload="auto" controls></audio>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 

@@ -67,7 +67,19 @@ class SiteController extends Controller
     {
         $video = Video::findAll(['id' => 1]);
         $articles = Articles::find()->orderBy(['id' => SORT_DESC])->limit(6)->all();
-        $images = Images::find()->select('path')->all();
+        $images = Images::find()->all();
+
+        foreach ($images as $single) {
+            if($single->name == 'header'){
+                $headerImage = $single->path;
+            }
+            if($single->name == 'event'){
+                $eventImage = $single->path;
+            }
+            if($single->name == 'footer'){
+                $footerImage = $single->path;
+            }
+        }
         $musics = Music::find()->all();
         $files = Files::find()->all();
         $mainMusic = Music::find()->select('path')->where(['name' => 'main'])->one();
@@ -93,7 +105,18 @@ class SiteController extends Controller
             $url = substr($single->url, strpos($single->url, '=') + 1, strlen($single->url));;
         }
 
-        return $this->render('index',['articles' => $articles, 'video' => $url, 'images' => $images, 'files' => $filesArray, 'music' => $musics, 'mainMusic' => $mainMusic, 'content' => $contentArray]);
+        return $this->render('index',
+            [
+                'articles' => $articles,
+                'video' => $url,
+                'images' => $images,
+                'headerImage' => $headerImage,
+                'eventImage' => $eventImage,
+                'footerImage' => $footerImage,
+                'files' => $filesArray,
+                'music' => $musics,
+                'mainMusic' => $mainMusic,
+                'content' => $contentArray]);
     }
     public function actionLogin()
     {
