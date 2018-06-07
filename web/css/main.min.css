@@ -3184,7 +3184,8 @@ a {
 .mass-media {
   background-color: #191919;
   position: relative;
-  z-index: -5; }
+  z-index: -5;
+  display: none;}
   .mass-media__left-title {
     position: absolute;
     top: 50%;
@@ -3296,10 +3297,10 @@ a {
     bottom: 0;
     z-index: 5; }
   .mass-media__contacts-title {
-    margin-bottom: 20px
+    margin-bottom: 20px;
     font-size: 25px; }
   .mass-media__contacts-desc {
-    margin-top: 10px
+    margin-top: 10px;
     font-weight: normal;
     text-transform: none;
     margin-bottom: 0; }
@@ -3321,7 +3322,8 @@ a {
 .footer {
   padding: 70px 0;
   background-color: #141414;
-  text-align: center; }
+  text-align: center;
+  border-top: 1px solid #353535}
   .footer__logotype {
     max-width: 40px;
     display: inline-block;
@@ -3333,6 +3335,17 @@ a {
     .footer__logotype-text-right {
       font-size: 12px;
       letter-spacing: 1.5px; }
+
+.footer .mass-media__contacts-desc{
+  text-align: center;
+}
+
+.footer .mass-media__contacts{
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 40px;
+}
 
 .musiclist {
   opacity: 0; }
