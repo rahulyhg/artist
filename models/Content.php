@@ -32,7 +32,8 @@ class Content extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'title', 'content', 'time', 'day', 'month', 'year'], 'string', 'max' => 255],
+            [['name', 'title', 'time', 'day', 'month', 'year'], 'string', 'max' => 255],
+            [['content'], 'string']
         ];
     }
 
