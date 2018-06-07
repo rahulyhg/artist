@@ -37,7 +37,7 @@ $this->title = 'My Yii Application';
 
         <div class="header__top-right">
 
-            <a class="header__video" href="#"><i class="fa fa-play header__i-video"></i></a>
+            <a class="header__video" target="_blank" href="https://www.youtube.com/channel/UCLFBCWWOcXtjj6vGBfql5bQ"><i class="fa fa-play header__i-video"></i></a>
 
             <p class="header__top-text-right text__left-line">Посмотри меня</p>
 
@@ -60,6 +60,8 @@ $this->title = 'My Yii Application';
             <audio class="header__audio" src="/uploads/musics/<?php echo $mainMusic; ?>" preload="auto" controls></audio>
 
             <div class="header__center-button-wrap">
+
+                <p class="header__market-title"><span>Скоро</span> на маркетах</p>
 
                 <a href="<?php echo $content[0]->title; ?>"><img src="img/yand.png" alt="" class="img-responsive header__button-yand"></a>
                 <a href="<?php echo $content[1]->title; ?>"><img src="img/google.png" alt="" class="img-responsive header__button-google"></a>
@@ -109,7 +111,7 @@ $this->title = 'My Yii Application';
 <section id="scrollto" class="event">
 
     <p class="event__left-title text__right-line text__left-line">Афиша</p>
-    <p class="event__right-title">Декоративная полезная инфа</p>
+    <p class="event__right-title">Новости</p>
 
     <div class="container-fluid">
 

@@ -2891,6 +2891,10 @@ a {
       left: 15px;
       font-size: 11px; }
 
+.header__market-title span{
+  color: #4fddcd;
+}
+
 .text__right-line::before {
   content: '';
   position: absolute;
@@ -3050,7 +3054,7 @@ a {
   .event__right-title {
     position: absolute;
     top: 50%;
-    right: -41px;
+    right: 38px;
     -webkit-transform: rotate(90deg) translateY(-50%);
         -ms-transform: rotate(90deg) translateY(-50%);
             transform: rotate(90deg) translateY(-50%);

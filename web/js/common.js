@@ -46,15 +46,15 @@ $(function() {
             });
     });
 
-    $('.header__video').click( function(event){
-        event.preventDefault();
-        $('.overlay').fadeIn(400,
-            function(){
-                $('.video__popup')
-                    .css('display', 'block')
-                    .animate({opacity: 1, top: '100px'}, 200);
-            });
-    });
+    // $('.header__video').click( function(event){
+    //     event.preventDefault();
+    //     $('.overlay').fadeIn(400,
+    //         function(){
+    //             $('.video__popup')
+    //                 .css('display', 'block')
+    //                 .animate({opacity: 1, top: '100px'}, 200);
+    //         });
+    // });
 
     $('.close, .overlay').click( function(){
         $('.musiclist__popup, .video__popup')
