@@ -34,4 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
+    <p>
+        <span class="glyphicon glyphicon-eye-open"></span> - просмотр записи<br>
+        <span class="glyphicon glyphicon-trash"></span> - удалени записи<br>
+        Запись с <b>Name</b> <b>main</b> удалять <b style="color: red">НЕ НУЖНО</b> это песня, которая находится на главной странице
+    </p>
 </div>
