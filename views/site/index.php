@@ -53,7 +53,7 @@ $this->title = 'My Yii Application';
 
             <p class="header__center-medium-title">Даниил Иванов</p>
 
-            <h1 class="header__center-large-title">Познакомимься, может?</h1>
+            <h1 class="header__center-large-title">Познакомимся, может?</h1>
 
             <p class="header__center-text-desc">Выпускник РИТИ ГИТИС (Мастерская народного артиста РФ, В.Б.Гаркалинфа)</p>
 
@@ -161,8 +161,8 @@ $this->title = 'My Yii Application';
             <div class="gallery__carousel">
                 <?php foreach ($images as $single): ?>
                     <?php if($single->name !== 'header' && $single->name !== 'event' && $single->name !== 'footer'): ?>
-                        <div>
-                            <img src="/uploads/<?php echo $single->path;?>" alt="" class="img-responsive">
+                        <div class="zoom-gallery">
+                            <a href="/uploads/<?php echo $single->path;?>"><img src="/uploads/<?php echo $single->path;?>" alt="" class="img-responsive"></a>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
