@@ -3076,8 +3076,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    z-index: -1;
-    padding-top: 15px;}
+    z-index: -1;}
     .header__center::before {
       content: '';
       position: absolute;
@@ -3117,8 +3116,8 @@ a {
     .header__center-wrap .audioplayer:not(.audioplayer-playing) .audioplayer-playpause a::before {
       width: 0;
       height: 0;
-      border: 15px solid transparent;
-      border-left: 25px solid #fff;
+      border: 12px solid transparent;
+      border-left: 21px solid #fff;
       content: '';
       position: absolute;
       top: 50%;
@@ -3160,21 +3159,21 @@ a {
     font-weight: normal;
     font-size: 24px;
     margin-top: 0;
-    margin-bottom: 5px; }
+    margin-bottom: 15px; }
   .header__center-large-title {
     font-family: "DinProCondBlack", sans-serif;
     font-weight: normal;
     font-size: 45px;
     max-width: 400px;
     line-height: 1;
-    margin: 0 auto 25px; }
+    margin: 0 auto 10px; }
   .header__center-text-desc {
     text-transform: none;
     font-weight: normal;
     font-size: 14px;
-    max-width: 205px;
-    line-height: 1.6;
-    margin: 0 auto 20px; }
+    max-width: 240px;
+    line-height: 1.3;
+    margin: 0 auto 30px; }
   .header__center-i-sound {
     font-size: 25px;
     padding: 21.2px 12px 22px 19px;
@@ -3246,10 +3245,11 @@ a {
         font-size: 16px;
         position: relative;
         bottom: -1px; }
-      .header__social li .fa-youtube-play {
-        font-size: 19px;
+      .header__social li .fa-soundcloud {
+        font-size: 21px;
         position: relative;
-        bottom: -2px; }
+        bottom: -2px;
+        width: 30px;}
       .header__social li .fa-vk {
         font-size: 19px; }
   .header__bottom-text {
@@ -3276,6 +3276,10 @@ a {
 
 .header__market-title span{
   color: #4fddcd;
+}
+.soundcloud-text{
+  margin-top: -15px;
+  margin-bottom: 15px;
 }
 
 .text__right-line::before {
@@ -3448,7 +3452,8 @@ a {
 /******************* SECTION GALLERY *******************/
 .gallery {
   background-color: #141414;
-  position: relative; }
+  position: relative;
+  display: none;}
   .gallery__left-title {
     position: absolute;
     top: 50%;
