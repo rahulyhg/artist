@@ -49,13 +49,21 @@ $this->title = 'My Yii Application';
 
             <p class="header__center-small-title">Актер, певец</p>
 
-            <p class="header__center-large-title">Даниил Иванов</p>
+            <h1 class="header__center-large-title">Даниил Иванов</h1>
 
             <p class="header__center-text-desc">Выпускник РИТИ-ГИТИС (Мастерская народного артиста РФ, В.Б.Гаркалина)</p>
 
-            <h1 class="header__center-medium-title">Познакомимся, может?</h1>
+<!--            <p class="header__center-medium-title">Познакомимся, может?</p>-->
 
-            <audio class="header__audio" src="/uploads/musics/<?php echo $mainMusic; ?>" preload="auto" controls></audio>
+            <div class="video__wrap">
+
+                <div class="video__iframe-wrap">
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $video; ?>?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                </div>
+
+            </div>
 
             <div class="header__center-button-wrap">
 
@@ -306,7 +314,7 @@ $this->title = 'My Yii Application';
 
         <div class="video__iframe-wrap">
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $video; ?>?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 
         </div>
 
