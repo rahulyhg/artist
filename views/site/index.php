@@ -31,8 +31,6 @@ $this->title = 'My Yii Application';
 
             </a>
 
-            <p class="header__logo-slogan">Творческая поддержка</p>
-
         </div>
 
         <div class="header__top-right">
@@ -51,17 +49,17 @@ $this->title = 'My Yii Application';
 
             <p class="header__center-small-title">Актер, певец</p>
 
-            <p class="header__center-medium-title">Даниил Иванов</p>
+            <p class="header__center-large-title">Даниил Иванов</p>
 
-            <h1 class="header__center-large-title">Познакомимся, может?</h1>
+            <p class="header__center-text-desc">Выпускник РИТИ-ГИТИС (Мастерская народного артиста РФ, В.Б.Гаркалина)</p>
 
-            <p class="header__center-text-desc">Выпускник РИТИ ГИТИС (Мастерская народного артиста РФ, В.Б.Гаркалинфа)</p>
+            <h1 class="header__center-medium-title">Познакомимся, может?</h1>
 
             <audio class="header__audio" src="/uploads/musics/<?php echo $mainMusic; ?>" preload="auto" controls></audio>
 
             <div class="header__center-button-wrap">
 
-                <p class="header__market-title"><span>Скоро</span> на маркетах</p>
+                <p class="header__market-title">Доступно в соцсетях<br> <span>скоро</span> на маркетах</p>
 
                 <a href="<?php echo $content[0]->title; ?>"><img src="img/yand.png" alt="" class="img-responsive header__button-yand"></a>
                 <a href="<?php echo $content[1]->title; ?>"><img src="img/google.png" alt="" class="img-responsive header__button-google"></a>
@@ -93,8 +91,8 @@ $this->title = 'My Yii Application';
 
             <ul class="header__social">
 
+                <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
                 <li><a href="<?php echo $content[3]->title; ?>" target="_blank"><i class="fa fa-vk"></i></a></li>
-                <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
                 <li><a href="<?php echo $content[5]->title; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                 <li><a href="<?php echo $content[6]->title; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
 
@@ -182,8 +180,8 @@ $this->title = 'My Yii Application';
     <div class="mass-media__right-title">
 
         <ul class="mass-media__social">
+            <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-soundcloud"></i></a></li>
             <li><a href="<?php echo $content[3]->title; ?>" target="_blank"><i class="fa fa-vk"></i></a></li>
-            <li><a href="<?php echo $content[4]->title; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
             <li><a href="<?php echo $content[5]->title; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
             <li><a href="<?php echo $content[6]->title; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
         </ul>
@@ -278,21 +276,18 @@ $this->title = 'My Yii Application';
             <div class="mass-media__contacts">
 
                 <p class="mass-media__contacts-desc"><?php echo $content[8]->title; ?><br>
-                    <span><?php echo $content[8]->content; ?></span></p>
+                    <span><?php echo $content[8]->content; ?></span><br>
+                    <?php echo $content[10]->content; ?></p>
 
                 <p class="mass-media__contacts-desc">Театр. кино (агент)<br>
                     <?php echo $content[9]->title; ?><br>
                     <span><?php echo $content[9]->content; ?></span></p>
-
-                <p class="mass-media__contacts-desc"><?php echo $content[10]->content; ?></p>
 
             </div>
 
         </div>
 
     </div>
-
-
 
     <div class="musiclist__popup">
 
