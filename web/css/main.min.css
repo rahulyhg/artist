@@ -3282,6 +3282,11 @@ a {
   margin-bottom: 15px;
 }
 
+.video__wrap{
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
 .text__right-line::before {
   content: '';
   position: absolute;
