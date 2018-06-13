@@ -40,12 +40,6 @@ $(function() {
 
     $('.header__audio').audioPlayer();
 
-    $('.musiclist__item').audioPlayer({
-        strPlay: '<i class=\'fa fa-play\'></i>',
-        strPause: '<i class=\'fa fa-pause\'></i>',
-        strVolume: '<i class=\'fa fa-volume-up\'></i>'
-    });
-
     $('.header__musiclist').click( function(event){
         event.preventDefault();
         $('.overlay').fadeIn(400,
