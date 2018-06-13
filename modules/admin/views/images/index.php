@@ -33,6 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <span class="glyphicon glyphicon-eye-open"></span> - просмотр записи<br>
         <span class="glyphicon glyphicon-trash"></span> - удалени записи<br>
-        Запись с <b>Name</b> <b>header, event, footer</b> удалять <b style="color: red">НЕ НУЖНО</b> это песня, которая находится на главной странице
+        Запись с <b>Name</b> <b>header, event, footer</b> удалять <b style="color: red">НЕ НУЖНО</b> это картинки, которые находятся на главной странице
     </p>
 </div>

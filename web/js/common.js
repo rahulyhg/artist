@@ -26,6 +26,16 @@ $(function() {
         }
     });
 
+    $('.event__slider').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 50,
+        smartSpeed: 500,
+        nav: true,
+        dots: false,
+        navText: ['Назад', 'Вперед'],
+    });
+
     $('.mass-media__news-text-wrap').equalHeights();
 
     $('.header__audio').audioPlayer();

@@ -45,6 +45,7 @@ use app\assets\AppAsset;
             ['label' => 'Изображение', 'url' => ['/admin/images']],
             ['label' => 'Видео', 'url' => ['/admin/video']],
             ['label' => 'Файлы', 'url' => ['/admin/files']],
+            ['label' => 'Афиша', 'url' => ['/admin/events']],
             '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Articles;
 use app\models\Content;
+use app\models\Events;
 use app\models\Files;
 use app\models\Images;
 use app\models\Music;
@@ -73,9 +74,6 @@ class SiteController extends Controller
             if($single->name == 'header'){
                 $headerImage = $single->path;
             }
-            if($single->name == 'event'){
-                $eventImage = $single->path;
-            }
             if($single->name == 'footer'){
                 $footerImage = $single->path;
             }
@@ -83,6 +81,7 @@ class SiteController extends Controller
         $musics = Music::find()->all();
         $files = Files::find()->all();
         $mainMusic = Music::find()->select('path')->where(['name' => 'main'])->one();
+        $events = Events::find()->all();
 
         $content = Content::find()->all();
 
@@ -107,16 +106,17 @@ class SiteController extends Controller
 
         return $this->render('index',
             [
+                'events' => $events,
                 'articles' => $articles,
                 'video' => $url,
                 'images' => $images,
                 'headerImage' => $headerImage,
-                'eventImage' => $eventImage,
                 'footerImage' => $footerImage,
                 'files' => $filesArray,
                 'music' => $musics,
                 'mainMusic' => $mainMusic,
-                'content' => $contentArray]);
+                'content' => $contentArray
+            ]);
     }
     public function actionLogin()
     {

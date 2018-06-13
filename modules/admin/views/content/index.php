@@ -26,11 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'title',
             'content',
-            'time',
-            'day',
-            'month',
-            'year',
-
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header'=>'Действия',

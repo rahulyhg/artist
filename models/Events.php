@@ -5,25 +5,25 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "content".
+ * This is the model class for table "events".
  *
  * @property int $id
- * @property string $name
  * @property string $title
  * @property string $content
  * @property string $time
  * @property string $day
  * @property string $month
- * @property string $year
+ * @property int $year
+ * @property string $image
  */
-class Content extends \yii\db\ActiveRecord
+class Events extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'content';
+        return 'events';
     }
 
     /**
@@ -32,8 +32,9 @@ class Content extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'title'], 'string', 'max' => 255],
-            [['content'], 'string']
+            [['content'], 'string'],
+            [['year'], 'integer'],
+            [['title', 'time', 'day', 'month', 'image'], 'string', 'max' => 255],
         ];
     }
 
@@ -44,13 +45,18 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
             'title' => 'Title',
             'content' => 'Content',
-//            'time' => 'Time',
-//            'day' => 'Day',
-//            'month' => 'Month',
-//            'year' => 'Year',
+            'time' => 'Time',
+            'day' => 'Day',
+            'month' => 'Month',
+            'year' => 'Year',
+            'image' => 'Image',
         ];
+    }
+    public function saveImage($filename)
+    {
+        $this->image = $filename;
+        return $this->save(false);
     }
 }

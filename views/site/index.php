@@ -113,35 +113,39 @@ $this->title = 'My Yii Application';
 
     <div class="container-fluid">
 
-        <div class="event__main" style="background-image: url(/uploads/<?php echo $eventImage; ?>)">
+        <div class="event__slider">
+            <?php foreach ($events as $event): ?>
+            <div class="event__main" style="background-image: url(/uploads/events/<?php echo $event->image; ?>)">
 
-            <div class="event__main-top">
+                <div class="event__main-top">
 
-                <div class="event__main-top-left">
+                    <div class="event__main-top-left">
 
-                    <h2 class="event__title"><?php echo $content[7]->title; ?></h2>
+                        <h2 class="event__title"><?php echo $event->title; ?></h2>
 
-                    <p><?php echo $content[7]->content; ?></p>
+                        <p><?php echo $event->content; ?></p>
+
+                    </div>
+
+                    <div class="event__main-top-right">
+
+                        <p class="event__date"><?php echo $event->day; ?> <span><?php echo $event->month; ?><br> <?php echo $event->year; ?></span></p>
+
+                    </div>
 
                 </div>
 
-                <div class="event__main-top-right">
+                <div class="event__main-bottom">
 
-                    <p class="event__date"><?php echo $content[7]->day; ?> <span><?php echo $content[7]->month; ?><br> <?php echo $content[7]->year; ?></span></p>
+                    <p class="event__time"><?php echo $event->time; ?></p>
 
                 </div>
 
             </div>
-
-            <div class="event__main-bottom">
-
-                <p class="event__time"><?php echo $content[7]->time; ?></p>
-
-            </div>
-
-            <p class="event__title-decor">event</p>
-
+            <?php endforeach; ?>
         </div>
+
+        <p class="event__title-decor">event</p>
 
     </div>
 

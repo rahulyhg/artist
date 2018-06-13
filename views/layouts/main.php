@@ -12,6 +12,7 @@ AppAsset::register($this);
         <meta charset="<?= Yii::$app->charset ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="img/favicon/vua.jpg">
         <?php $this->registerCsrfMetaTags() ?>
         <title>Даниил Иванов</title>
         <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">

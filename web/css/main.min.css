@@ -2851,6 +2851,216 @@ img.mfp-img {
   height: 100%;
   width: 100%; }
 
+.event__slider {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+
+.event__slider .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */ }
+
+.event__slider .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.event__slider .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+.event__slider .owl-wrapper,
+.event__slider .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+.event__slider .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
+
+.event__slider .owl-item img {
+  display: block;
+  width: 100%; }
+
+.event__slider .owl-nav .owl-prev,
+.event__slider .owl-nav .owl-next,
+.event__slider .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.event__slider .owl-nav button.owl-prev,
+.event__slider .owl-nav button.owl-next,
+.event__slider button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit; }
+
+.event__slider.owl-loaded {
+  display: block; }
+
+.event__slider.owl-loading {
+  opacity: 0;
+  display: block; }
+
+.event__slider.owl-hidden {
+  opacity: 0; }
+
+.event__slider.owl-refresh .owl-item {
+  visibility: hidden; }
+
+.event__slider.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.event__slider.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.event__slider.owl-rtl {
+  direction: rtl; }
+
+.event__slider.owl-rtl .owl-item {
+  float: right; }
+
+/* No Js */
+.no-js .event__slider {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.event__slider .animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.event__slider .owl-animated-in {
+  z-index: 0; }
+
+.event__slider .owl-animated-out {
+  z-index: 1; }
+
+.event__slider .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*
+ *  Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out; }
+
+/*
+ *  Owl Carousel - Lazy Load Plugin
+ */
+.event__slider .owl-item {
+  /**
+      This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+      calculation of the height of the owl-item that breaks page layouts
+     */ }
+
+.event__slider .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.event__slider .owl-item .owl-lazy[src^=""], .event__slider .owl-item .owl-lazy:not([src]) {
+  max-height: 0; }
+
+.event__slider .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
+/*
+ *  Owl Carousel - Video Plugin
+ */
+.event__slider .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.event__slider .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms ease;
+  transition: -webkit-transform 100ms ease;
+  -o-transition: transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease; }
+
+.event__slider .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3); }
+
+.event__slider .owl-video-playing .owl-video-tn,
+.event__slider .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.event__slider .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease; }
+
+.event__slider .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -3424,8 +3634,8 @@ a {
       z-index: -1; }
   .event__title-decor {
     position: absolute;
-    bottom: -70px;
-    right: 110px;
+    bottom: 150px;
+    right: 210px;
     color: #141414;
     font-size: 290px;
     font-family: "DinProCondBlack", sans-serif;
@@ -3453,6 +3663,58 @@ a {
     white-space: nowrap;
     margin: 0;
     letter-spacing: 1.5px; }
+
+  .event__slider {
+    padding-bottom: 60px; }
+    .event__slider .owl-nav {
+      position: absolute;
+      bottom: 0;
+      width: 250px;
+      height: 50px; }
+      .event__slider .owl-nav:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 160px;
+        height: 50px;
+        background-image: url(../img/pattern.png);
+        z-index: -1; }
+      .event__slider .owl-nav .owl-prev {
+        position: absolute;
+        left: 0;
+        top: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        padding-left: 30px;
+        outline: none; }
+        .event__slider .owl-nav .owl-prev::after {
+          content: '\f104';
+          font-family: FontAwesome;
+          position: absolute;
+          left: 0;
+          top: -3px;
+          font-size: 16px; }
+      .event__slider .owl-nav .owl-next {
+        position: absolute;
+        right: 0;
+        top: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        padding-right: 30px;
+        outline: none; }
+        .event__slider .owl-nav .owl-next::after {
+          content: '\f105';
+          font-family: FontAwesome;
+          position: absolute;
+          right: 0;
+          top: -3px;
+          font-size: 16px; }
 
 /******************* SECTION GALLERY *******************/
 .gallery {
@@ -4005,8 +4267,8 @@ a {
     padding-bottom: 90px; }
     .event__title-decor {
       font-size: 155px;
-      bottom: -30px;
-      right: 45px; }
+      bottom: 105px;
+      right: 110px; }
     .event__left-title {
       position: relative;
       top: -42px;
@@ -4190,6 +4452,16 @@ a {
         margin: 7px 0 0;
         display: block;
         font-size: 14px; }
+  .event__slider {
+    padding-bottom: 115px; }
+    .event__slider .owl-nav {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .event__title-decor {
+    bottom: 160px;
+    right: 10%; }
   .event__title {
     margin-bottom: 15px; }
   .event__main {
@@ -4244,8 +4516,8 @@ a {
     z-index: 15; }
   .event__title-decor {
     font-size: 80px;
-    bottom: -20px;
-    right: 15px; }
+    bottom: 182px;
+    right: 40px; }
   .mass-media__title-decor {
     font-size: 99px;
     left: -41px; }
