@@ -3541,6 +3541,7 @@ a {
   .event__main {
     width: 100%;
     min-height: 650px;
+    margin: 0 -1px;
     background-repeat: no-repeat;
     background-position: center 30%;
     -webkit-background-size: cover;
