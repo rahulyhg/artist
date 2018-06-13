@@ -38,7 +38,6 @@ use app\assets\AppAsset;
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Сайт', 'url' => ['/site/index']],
             ['label' => 'Статьи', 'url' => ['/admin/articles']],
             ['label' => 'Контент страницы', 'url' => ['/admin/content']],
             ['label' => 'Музыка', 'url' => ['/admin/music']],
