@@ -296,12 +296,7 @@ $this->title = 'My Yii Application';
     <div class="musiclist__popup">
 
         <div class="close"></div>
-        <?php foreach ($music as $single): ?>
-            <?php if($single->name !== 'main'): ?>
-                <p class="musiclist__title"><?php echo $single->name; ?></p>
-                <audio class="musiclist__item" src="/uploads/musics/<?php echo $single->path; ?>" preload="auto" controls></audio>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/87987851&color=%23141414&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
     </div>
 
     <div class="video__popup">
