@@ -45,13 +45,13 @@ class Events extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'time' => 'Time',
-            'day' => 'Day',
-            'month' => 'Month',
-            'year' => 'Year',
-            'image' => 'Image',
+            'title' => 'Заголовок',
+            'content' => 'Контент',
+            'time' => 'Время',
+            'day' => 'День',
+            'month' => 'Месяц',
+            'year' => 'Год',
+            'image' => 'Картинка',
         ];
     }
     public function saveImage($filename)

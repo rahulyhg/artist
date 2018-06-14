@@ -44,9 +44,9 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'title' => 'Title',
-            'content' => 'Content',
+            'name' => 'Наименование',
+            'title' => 'Заголовок',
+            'content' => 'Контент',
 //            'time' => 'Time',
 //            'day' => 'Day',
 //            'month' => 'Month',

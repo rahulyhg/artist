@@ -37,8 +37,8 @@ class Files extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'path' => 'Path',
+            'name' => 'Название',
+            'path' => 'Путь',
         ];
     }
 

@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use artkost\yii2\trumbowyg\Trumbowyg;
 /* @var $this yii\web\View */
 /* @var $model app\models\Events */
 /* @var $form yii\widgets\ActiveForm */
@@ -14,7 +14,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
+    <?php echo $form->field($model, 'content')->widget(Trumbowyg::className(), [
+        'settings' => [
+            'lang' => 'ru'
+        ]
+    ]); ?>
 
     <?= $form->field($model, 'time')->textInput(['maxlength' => true]) ?>
 

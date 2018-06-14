@@ -45,14 +45,14 @@ class Articles extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'content' => 'Content',
+            'title' => 'Заголовок',
+            'description' => 'Описание',
+            'content' => 'Контент',
             'url' => 'Url',
-            'image' => 'Image',
-            'day' => 'Day',
-            'month' => 'Month',
-            'year' => 'Year',
+            'image' => 'Картинка',
+            'day' => 'День',
+            'month' => 'Месяц',
+            'year' => 'Год',
         ];
     }
     public function saveImage($filename)

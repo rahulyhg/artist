@@ -38,8 +38,8 @@ class Images extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'path' => 'Path',
+            'name' => 'Название',
+            'path' => 'Путь',
         ];
     }
     public function saveImage($filename)
