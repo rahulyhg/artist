@@ -90,10 +90,6 @@ $(function() {
         }
     });
 
-    $('.header__center-button-wrap a').on('click', function(e){
-       e.preventDefault();
-    });
-
     $('.zoom-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
