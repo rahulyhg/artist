@@ -18,14 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content')->textarea(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'time')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'day')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'month')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'year')->textInput(['maxlength' => true]) ?>
-
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
