@@ -61,7 +61,7 @@ $this->title = 'My Yii Application';
 
             <!--<p class="header__market-title">Доступно в соцсетях</p>-->
 
-            <!--<a href="--><?php //echo $content[0]->title; ?><!--"><img src="img/yand.png" alt="" class="img-responsive header__button-yand"></a>-->
+                <a href="<?php echo $content[0]->title; ?>"><img src="img/yand.png" alt="" class="img-responsive header__button-yand"></a>
                 <a href="<?php echo $content[1]->title; ?>"><img src="img/google.png" alt="" class="img-responsive header__button-google"></a>
                 <a href="<?php echo $content[2]->title; ?>"><img src="img/itunes.png" alt="" class="img-responsive header__button-itunes"></a>
 
