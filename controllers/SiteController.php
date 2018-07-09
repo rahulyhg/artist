@@ -81,7 +81,7 @@ class SiteController extends Controller
         $musics = Music::find()->all();
         $files = Files::find()->all();
         $mainMusic = Music::find()->select('path')->where(['name' => 'main'])->one();
-        $events = Events::find()->all();
+        $events = Events::find()->orderBy('id DESC')->all();
 
         $content = Content::find()->all();
 
